@@ -1,0 +1,18 @@
+Tema IA4 - Server de chat
+Florescu Cosmin, Zaharia Eric-Alexandru
+
+Am implementat un server de chat si un client.
+In fisierul server.py am definit o clasa Client cu metodele init, str si run(pentru a o putea apela in contextul altui
+thread). In run primim datele de la client daca exista, printam in terminal mesajul si facem broadcast celorlalti clienti.
+Daca nu exista datele, inchidem socket-ul si eliminam clientul din conexiunile active. Cream un thread pentru fiecare
+client.
+
+In client.py avem metoda receive care ruleaza pe un thread si interfata grafica care ruleaza pe thread-ul main. Avem un
+buton de quit care face sigkill pe client. Nu am reusit altfel sa inchid fereastra si clientul deoarece credem ca thread-ul
+main ar fi trebuit folosit pt receive si apelata metoda mainloop a tkinter pe celalalt. Item-urile de gui care se actualizeaza
+sunt deja intr-un loop infinit deci nu a mai trebuit apelata aceasta metoda.
+
+Am realizat un fel de "protocol" de trimitere a datelor, facand padding pe tot ce se trimite ca sa nu trebuiasca sa
+trimitem si alte informatii precum marimea mesajului si sa stim exact cat primim dintr-o parte in alta.
+
+Contributiile au fost egale deoarece am fost doar 2.
