@@ -1,5 +1,5 @@
-Tema IA4 - Server de chat
-Florescu Cosmin, Zaharia Eric-Alexandru
+Server de chat
+Zaharia Eric-Alexandru
 
 Am implementat un server de chat si un client.
 In fisierul server.py am definit o clasa Client cu metodele init, str si run(pentru a o putea apela in contextul altui
@@ -14,5 +14,3 @@ sunt deja intr-un loop infinit deci nu a mai trebuit apelata aceasta metoda.
 
 Am realizat un fel de "protocol" de trimitere a datelor, facand padding pe tot ce se trimite ca sa nu trebuiasca sa
 trimitem si alte informatii precum marimea mesajului si sa stim exact cat primim dintr-o parte in alta.
-
-Contributiile au fost egale deoarece am fost doar 2.
